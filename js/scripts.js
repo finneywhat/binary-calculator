@@ -1,8 +1,13 @@
 // Back-End
 function calcDecimal(binary) {
   var binaryArray = binary.split('');
+  var decimalNum = 0;
   binaryArray.reverse();
-  console.log(binaryArray);
+  for (var i = 0; i < binaryArray.length; i++) {
+    num = parseInt(binaryArray[i]);
+    decimalNum = decimalNum + (num * (2 ** i));
+  }
+  return decimalNum;
 }
 
 // Front-End
