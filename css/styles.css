@@ -1,0 +1,14 @@
+#error {
+  display: none;
+}
+
+.result {
+  display: none;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#binaryForm {
+  margin-top: 30px;
+}

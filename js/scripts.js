@@ -16,7 +16,18 @@ $(function() {
     event.preventDefault();
 
     var binary = $("input#binary").val();
-    var decimal = calcDecimal(binary);
-    $(".result").text(decimal);
+    var regEx = /[^01]/;
+    if (regEx.test(binary)) {
+      $(".result").hide();
+      $("#error").show();
+      console.log("This is an error");
+    } else {
+      var decimal = calcDecimal(binary);
+      $(".result").show();
+      $("#error").hide();
+      $("#userBinary").text(binary);
+      $("#userDecimal").text(decimal);
+    }
+
   })
 })

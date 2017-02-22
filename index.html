@@ -9,14 +9,25 @@
   </head>
   <body>
     <div class="container">
-      <h1>Binary calc</h1>
-      <form id="binaryForm">
-        <label for="binary">Enter a binary number</label>
-        <input id="binary" type="number" placeholder="ex. 100101">
-        <button type="submit" class="btn btn-warning">Calculate</button>
-      </form>
-      <div class="result">
-
+      <div class="well">
+        <h1>Binary calc</h1>
+        <form id="binaryForm" >
+          <label for="binary">Enter a binary number</label>
+          <input id="binary" type="number" placeholder="ex. 100101">
+          <button type="submit" class="btn btn-warning">Calculate</button>
+        </form>
+      </div>
+      <br>
+      <div class="alert alert-danger" role="alert" id="error">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        You have entered characters other than 0 or 1
+      </div>
+      <div class="alert alert-info result" role="alert">
+        You entered <span id="userBinary"></span> in binary.
+      </div>
+      <div class="alert alert-success result" role="alert">
+        Its decimal value is <span id="userDecimal"></span>.
       </div>
     </div>
   </body>
