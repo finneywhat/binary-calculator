@@ -18,13 +18,25 @@
         </form>
       </div>
       <br>
+      <div class="well">
+        <h1>Trinary calc</h1>
+        <form id="trinaryForm" >
+          <label for="trinary">Enter a trinary number</label>
+          <input id="trinary" type="number" placeholder="ex. 100101">
+          <button type="submit" class="btn btn-warning">Calculate</button>
+        </form>
+      </div>
+      <br>
       <div class="alert alert-danger" role="alert" id="error">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         <span class="sr-only">Error:</span>
         You have entered characters other than 0 or 1
       </div>
-      <div class="alert alert-info result" role="alert">
-        You entered <span id="userBinary"></span> in binary.
+      <div class="alert alert-info" id="userBinary" role="alert">
+        You entered <span></span> in binary.
+      </div>
+      <div class="alert alert-info" id="userTrinary" role="alert">
+        You entered <span></span> in trinary.
       </div>
       <div class="alert alert-success result" role="alert">
         Its decimal value is <span id="userDecimal"></span>.
